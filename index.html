@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <style>
+        /* Estilização padrão */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container-formulario {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .campo {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #28a745;
+            outline: none;
+        }
+
+        .opcoes-radio {
+            display: flex;
+            gap: 15px;
+            margin-top: 5px;
+        }
+
+        .opcoes-radio label {
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-formulario">
+        <h2>Criar Conta</h2>
+       
+        <form action="#" method="POST">
+            <!-- Campo Nome -->
+            <div class="campo">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <!-- Campo E-mail -->
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            </div>
+
+            <!-- Campo Senha -->
+            <div class="campo">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Crie uma senha forte" required>
+            </div>
+
+            <!-- Seleção Dropdown -->
+            <div class="campo">
+                <label for="area">Área de Interesse</label>
+                <select id="area" name="area" required>
+                    <option value="" disabled selected>Selecione uma opção...</option>
+                    <option value="frontend">Desenvolvimento Front-End</option>
+                    <option value="backend">Desenvolvimento Back-End</option>
+                    <option value="design">UI/UX Design</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <!-- Botões do tipo Radio -->
+            <div class="campo">
+                <label>Nível de Experiência</label>
+                <div class="opcoes-radio">
+                    <label><input type="radio" name="nivel" value="iniciante" checked> Iniciante</label>
+                    <label><input type="radio" name="nivel" value="intermediario"> Intermediário</label>
+                    <label><input type="radio" name="nivel" value="avancado"> Avançado</label>
+                </div>
+            </div>
+
+            <!-- Caixas de Texto Maior (Textarea) -->
+            <div class="campo">
+                <label for="mensagem">Sobre Você (Opcional)</label>
+                <textarea id="mensagem" name="mensagem" rows="3" placeholder="Fale um pouco sobre você..."></textarea>
+            </div>
+
+            <!-- Botão Enviar -->
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+</body>
+</html>
